@@ -6,7 +6,7 @@ global _start
 
 _start:
 mov eax, 1 ; numero su syscall 'exit'
-mov exb, 0 ; code de sortie = 0
+xor ebx, ebx ; code de sortie = 0
 int 0x80 ; appel system
 
 
