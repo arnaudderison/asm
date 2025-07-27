@@ -1,2 +1,1 @@
-# minios
-mini os
+# just for learn
