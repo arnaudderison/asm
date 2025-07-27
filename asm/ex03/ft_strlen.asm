@@ -2,7 +2,8 @@ section .text
     global ft_strlen
 
 ft_strlen:
-    mov esi, [esp + 4]
+    push esi
+    mov esi, [esp + 8]
     xor eax, eax
 
 .loop:
@@ -14,6 +15,7 @@ ft_strlen:
     jmp .loop
 
 .done:
+    pop esi
     ret
 
 

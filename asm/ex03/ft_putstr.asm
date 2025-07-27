@@ -5,6 +5,7 @@ section .text
 ft_putstr:
     push ebp
     mov ebp, esp
+    push esi
 
     mov esi, [ebp + 8]    ; ESI ← adresse de la chaîne (1er argument)
     push esi              ; sauvegarde ESI pour ft_strlen
@@ -17,6 +18,7 @@ ft_putstr:
     mov eax, 4            ; EAX ← syscall write
     int 0x80              ; appel système
 
+    pop esi
     mov esp, ebp
     pop ebp
     ret
